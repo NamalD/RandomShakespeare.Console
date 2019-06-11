@@ -14,16 +14,16 @@ namespace ConsoleDisplay
             var corpus = scraper.GetPoemsAsync().Result;
 
             // Generate
-            var generator = new Generator();
+            var generator = new Generator(corpus);
 
             while (true)
             {
                 Console.ResetColor();
 
                 // Generate and display poem
-                var poem = generator.GeneratePoem(corpus);
+                var sonnet = generator.NextSonnet();
 
-                foreach (var line in poem)
+                foreach (var line in sonnet)
                 {
                     Console.WriteLine(line);
                 }
