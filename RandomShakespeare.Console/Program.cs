@@ -30,7 +30,7 @@ namespace ConsoleDisplay
 
                 // Restart if requested
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("\nPress Enter to restart");
+                Console.Write($"{Environment.NewLine}Press Enter to restart");
                 var response = Console.ReadKey();
 
                 if (response.Key == ConsoleKey.Enter)
