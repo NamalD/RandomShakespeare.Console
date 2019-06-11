@@ -10,7 +10,7 @@ namespace ConsoleDisplay
             // Download and extract text from poems
             var scraper = new PoemScraper();
 
-            Console.WriteLine("Retriving poems");
+            Console.WriteLine("Retrieving poems");
             var corpus = scraper.GetPoemsAsync().Result;
 
             // Generate
