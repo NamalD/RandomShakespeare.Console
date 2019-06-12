@@ -18,6 +18,7 @@ namespace ConsoleDisplay
 
             while (true)
             {
+                Console.Clear();
                 Console.ResetColor();
 
                 // Generate and display poem
@@ -33,11 +34,7 @@ namespace ConsoleDisplay
                 Console.Write("\nPress Enter to restart");
                 var response = Console.ReadKey();
 
-                if (response.Key == ConsoleKey.Enter)
-                {
-                    Console.Clear();
-                }
-                else
+                if (response.Key != ConsoleKey.Enter)
                 {
                     return;
                 }
